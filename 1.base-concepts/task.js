@@ -1,32 +1,28 @@
 "use strict";
 
 function solveEquation(a, b, c) {
-  let arr = [];
+  // Вычисляем дискриминант
+  const discriminant = b ** 2 - 4 * a * c;
 
-  const discriminant = b * b - 4 * a * c;
-
+  // Проверяем значение дискриминанта
   if (discriminant < 0) {
-    return arr;
+    // Нет корней
+    return [];
   } else if (discriminant === 0) {
+    // Один корень
     const root = -b / (2 * a);
-    arr.push(root);
+    return [root];
   } else {
+    // Два корня
     const root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
     const root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
-    arr.push(root1, root2);
+    return [root1, root2];
   }
-
-  return arr;
 }
 
-const roots1 = solveEquation(1, -3, 2); // Два корня: [2, 1]
-const roots2 = solveEquation(1, 2, 1); // Один корень: [-1]
-const roots3 = solveEquation(1, 1, 1); // Нет корней: []
-
-console.log("Корни уравнения 1: " + roots1);
-console.log("Корни уравнения 2: " + roots2);
-console.log("Корни уравнения 3: " + roots3);
-
-function calculateTotalMortgage(percent, contribution, amount, countMonths) {
-
-}
+// Пример использования функции
+const a = 1;
+const b = -3;
+const c = 2;
+const roots = solveEquation(a, b, c);
+console.log("Корни уравнения:", roots);
