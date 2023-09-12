@@ -4,7 +4,7 @@ function getArrayParams(...arr) {
     return { min: undefined, max: undefined, avg: undefined };
   }
 
-  let min = Infinity; 
+  let min = Infinity;
   let max = -Infinity;
   let sum = 0;
 
