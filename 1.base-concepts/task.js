@@ -31,9 +31,6 @@ console.log("Корни уравнения 2: " + roots2);
 console.log("Корни уравнения 3: " + roots3);
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
-}
-
-function calculateTotalMortgage(percent, contribution, amount, countMonths) {
     percent = parseFloat(percent);
     contribution = parseFloat(contribution);
     amount = parseFloat(amount);
