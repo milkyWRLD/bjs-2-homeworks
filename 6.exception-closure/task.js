@@ -56,7 +56,6 @@ function getTriangle(a, b, c) {
     }
 }
 
-// Пример использования для задания №2:
 const triangle1 = getTriangle(3, 4, 5);
 console.log("Площадь треугольника:", triangle1.area);
 console.log("Периметр треугольника:", triangle1.perimeter);
