@@ -18,13 +18,11 @@ class AlarmClock {
     }
 
     removeClock(time) {
-        this.alarmCollection = this.alarmCollection.filter(alarm => {
-            if (alarm.time === time) {
-                alarm.canCall = true;
-                return false;
-            }
-            return true;
-        });
+        const foundAlarm = this.alarmCollection.find(alarm => alarm.time === time);
+        if (foundAlarm) {
+            foundAlarm.canCall = true;
+            this.alarmCollection = this.alarmCollection.filter(alarm => alarm !== foundAlarm);
+        }
     }
 
     getCurrentFormattedTime() {
